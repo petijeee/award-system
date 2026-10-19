@@ -61,7 +61,7 @@ section{padding-block:clamp(72px,10vw,120px)}
 /* hero */
 .hero{padding-block:clamp(64px,11vw,140px) clamp(56px,8vw,96px);text-align:center}
 .hero h1{font-size:clamp(48px,9vw,96px);line-height:1.02;letter-spacing:-.045em;font-weight:700}
-.hero .lead{margin:22px auto 0;max-width:34ch}
+.hero .lead{margin:22px auto 0;max-width:44ch}
 .hero .cta{margin-top:28px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font-size:19px}
 .chev::after{content:" ›"}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(56px,8vw,96px);text-align:left;border-top:1px solid var(--line)}
@@ -226,13 +226,13 @@ footer p+p{margin-top:8px}
 <header class="hero" id="top">
   <div class="wrap">
     <h1>Čo berie kovy.</h1>
-    <p class="lead">Dvanásť súťaží, jedna sezóna, jeden test. Pre prácu, ktorá má vyhrať, ešte kým je to brief.</p>
+    <p class="lead">Prešiel som výsledky dvanástich súťaží z tejto sezóny. Tu je, čo z nich vyšlo. Aby sme vedeli, či má idea šancu, ešte kým je to brief.</p>
     <div class="cta"><a class="chev" href="#test">Otestuj ideu</a><a class="chev" href="#kalendar">Najbližšie termíny</a></div>
     <div class="stats">
-      <div><b class="tnum">21 %</b><span>kampaní na Golden Drum 2026 vyhralo aspoň jeden kov</span></div>
-      <div><b class="tnum">44 %</b><span>všetkých kovov zobralo top 10 kampaní z 305</span></div>
-      <div><b class="tnum">2:00</b><span>limit case filmu na každom veľkom festivale</span></div>
-      <div><b class="tnum">8 / 8</b><span>prihlášok Dark Mode Ads skončilo s kovom</span></div>
+      <div><b class="tnum">21 %</b><span>kampaní na Golden Drum 2026 odišlo aspoň s bronzom. Ostatné s ničím.</span></div>
+      <div><b class="tnum">44 %</b><span>všetkých kovov zobralo desať kampaní. Prihlásených ich bolo 305.</span></div>
+      <div><b class="tnum">2:00</b><span>Dlhšie case video porota nepozerá. Platí to všade.</span></div>
+      <div><b class="tnum">8 z 8</b><span>Dark Mode Ads prihlásili osemkrát. Osemkrát vyhrali.</span></div>
     </div>
   </div>
 </header>
@@ -242,18 +242,18 @@ footer p+p{margin-top:8px}
     <div class="head">
       <p class="kicker">Award test</p>
       <h2>Šesť otázok pred prvým kolom.</h2>
-      <p class="lead">Zapni, na čo vieš idea odpovedať. Grand Prix práce sezóny 2026 prešli aspoň piatimi.</p>
+      <p class="lead">Prejdi ich nad briefom. Čo vieš poctivo zodpovedať, zapni. Tohtoročné Grand Prix práce mali aspoň päť.</p>
     </div>
     <div class="test">
       <div class="qs" id="qs"></div>
       <aside class="result" aria-live="polite">
         <div class="ring">
           <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="50"/><circle class="val" id="ringv" cx="60" cy="60" r="50" stroke-dasharray="314.16" stroke-dashoffset="314.16"/><text id="ringt" x="60" y="70" text-anchor="middle">0/6</text></svg>
-          <div class="verdict" id="verdict">Zatiaľ nie je award práca</div>
+          <div class="verdict" id="verdict">Na súťaž to zatiaľ nie je</div>
         </div>
-        <p class="vnote" id="vnote">Začni paradoxom a zmenou vo svete. Bez nich nepomôže ani najlepší case film.</p>
+        <p class="vnote" id="vnote"></p>
         <ul class="missing" id="missing"></ul>
-        <button class="reset" id="reset" type="button">Začať odznova</button>
+        <button class="reset" id="reset" type="button">Vymazať</button>
       </aside>
     </div>
   </div>
@@ -263,11 +263,11 @@ footer p+p{margin-top:8px}
   <div class="wrap wide">
     <div class="head">
       <p class="kicker">Kalendár 2026/27</p>
-      <h2>Čo príde najbližšie.</h2>
+      <h2>Čo nás čaká.</h2>
     </div>
     <div class="next" id="next"></div>
     <div class="months" id="months"></div>
-    <p class="legend">~ termín odvodený z ročníka 2026, pred plánovaním over na webe súťaže. Červený štítok je deadline.</p>
+    <p class="legend">Vlnovka znamená, že termín som odhadol podľa minulého roka. Pred plánovaním ho over na stránke súťaže.</p>
   </div>
 </section>
 
@@ -275,21 +275,21 @@ footer p+p{margin-top:8px}
   <div class="wrap wide">
     <div class="head">
       <p class="kicker">Čo vyhráva</p>
-      <h2>Deväť vzorcov, ktoré platia naprieč porotami.</h2>
-      <p class="lead">Každý s dôkazom zo sezóny 2026 a otázkou, ktorú si položíš nad briefom.</p>
+      <h2>Deväť vecí, ktoré sa u víťazov opakujú.</h2>
+      <p class="lead">Každú som videl vyhrať na viacerých súťažiach. Pod každou je otázka, ktorú si môžeš položiť nad briefom.</p>
     </div>
     <div class="pgrid" id="pgrid"></div>
     <div class="cap">
       <div><h3>Kde je strop bronz</h3><ul>
-        <li>Symbolický artefakt, ktorý komunikuje, ale nič nemení. Crashed Cans 1 z 5.</li>
-        <li>Produkt ako rekvizita pre komunitu. Šunkové kotouče 0 z 2.</li>
-        <li>Lokálny humor, keď vycestuje. Whopper doma zlato, vonku bronz.</li>
+        <li>Predmet, ktorý niečo hovorí, ale nič nemení. Crashed Cans: päť prihlášok, jeden bronz.</li>
+        <li>Produkt ako rekvizita. Šunkové kotúče v posilňovni na Golden Drum neprešli.</li>
+        <li>Domáci humor. Whopper mal doma zlato, vonku bronz.</li>
       </ul></div>
       <div><h3>Čo nevyhrá nič</h3><ul>
-        <li>Značka pomáha bez zvratu. adidas siete na 700 ihriskách 0 zo 7.</li>
-        <li>Oznam namiesto idey. Uber Eats Turecko 0 z 11.</li>
-        <li>Prieskum postoja ako hlavný výsledok.</li>
-        <li>Nepriznané AI. Cannes 2025 odobral Grand Prix.</li>
+        <li>Značka pomáha, ale bez zvratu. adidas dal siete na 700 ihrísk. Sedem prihlášok, nula.</li>
+        <li>Oznam. Uber Eats v Turecku hlásil, že sa premenoval. Jedenásť prihlášok, nula.</li>
+        <li>Prieskum, že sa ľuďom niečo páčilo.</li>
+        <li>AI, ktorú agentúra neprizná. Cannes za to minulý rok vzal Grand Prix späť.</li>
       </ul></div>
     </div>
   </div>
@@ -300,7 +300,7 @@ footer p+p{margin-top:8px}
     <div class="head">
       <p class="kicker">Mapa porôt</p>
       <h2>Každá porota počíta inak.</h2>
-      <p class="lead">Výsledky vážia v Cannes 20 až 50 % takmer všade. Na Epice nula. Vyber súťaž podľa toho, čo práca má.</p>
+      <p class="lead">V Cannes tvoria výsledky skoro všade aspoň pätinu bodov. Na Epice žiadne, tam súdia novinári. Oplatí sa vybrať súťaž podľa toho, čo má práca najsilnejšie.</p>
     </div>
     <div class="seg" id="seg" role="tablist">
       <span class="pill" id="pill"></span>
@@ -319,8 +319,8 @@ footer p+p{margin-top:8px}
   <div class="wrap wide">
     <div class="head">
       <p class="kicker">Case study</p>
-      <h2>Dve minúty. Päť blokov.</h2>
-      <p class="lead">Stavba zo 14 case filmov Golden Drum rozobratých po záberoch. Cannes radí robiť case film ako redakčný text, nie ako reklamu.</p>
+      <h2>Case video má dve minúty.</h2>
+      <p class="lead">Rozobral som 14 case videí z Golden Drum po záberoch. Víťazi ich stavajú skoro rovnako. Cannes radí písať case ako článok do novín.</p>
     </div>
     <div class="film">
       <div class="tl" aria-hidden="true">
@@ -332,30 +332,30 @@ footer p+p{margin-top:8px}
       </div>
       <div class="ticks" aria-hidden="true"><span style="left:0">0:00</span><span style="left:16.67%">0:20</span><span style="left:29.17%">0:35</span><span style="left:58.33%">1:10</span><span style="left:91.67%">1:50</span><span style="left:100%">2:00</span></div>
       <div class="blocks">
-        <div><h3><i style="background:var(--ink3)"></i>Problém</h3><p>Číslo s menom zdroja alebo hlas ľudí z problému. Kultúra hovorí sama.</p></div>
-        <div><h3><i style="background:var(--c-idea)"></i>Zvrat</h3><p>Otázka, na ktorú je idea odpoveďou. „Do ads really need all that energy?"</p></div>
-        <div><h3><i style="background:var(--c-strat)"></i>Mechanika</h3><p>Najviac dve karty, alebo systém ako popísaný diagram.</p></div>
-        <div><h3><i style="background:var(--c-exec)"></i>Dôkaz</h3><p>Spravodajstvo, expert s menom a funkciou, iné značky, štát.</p></div>
-        <div><h3><i style="background:var(--c-res)"></i>Výsledok</h3><p>Kto ďalší to prevzal. Na koniec jeden človek alebo jedna veta.</p></div>
+        <div><h3><i style="background:var(--ink3)"></i>Problém</h3><p>Číslo, pri ktorom je napísané, odkiaľ je. Alebo človek, ktorého sa to týka.</p></div>
+        <div><h3><i style="background:var(--c-idea)"></i>Zvrat</h3><p>Otázka, na ktorú je idea odpoveďou.</p></div>
+        <div><h3><i style="background:var(--c-strat)"></i>Mechanika</h3><p>Ako to funguje. Stačia na to dve karty.</p></div>
+        <div><h3><i style="background:var(--c-exec)"></i>Dôkaz</h3><p>Hovoria iní. Správy v televízii, expert s menom, iná značka.</p></div>
+        <div><h3><i style="background:var(--c-res)"></i>Výsledok</h3><p>Kto ďalší to prevzal. A na konci jeden človek.</p></div>
       </div>
     </div>
     <div class="entry">
-      <div class="st"><b>Text prihlášky, 1</b><p>Problém v čísle alebo vo fakte zo sveta, nie z brandu.</p></div>
-      <div class="st"><b>2</b><p>Zvrat jednou vetou.</p></div>
-      <div class="st"><b>3</b><p>Čo sa fyzicky stalo. Sloveso, objekt, miesto.</p></div>
-      <div class="st"><b>4</b><p>Prečo sa to dá škálovať alebo zopakovať.</p></div>
+      <div class="st"><b>Text prihlášky, 1</b><p>Začni faktom zo sveta, ktorý pozná aj porotca.</p></div>
+      <div class="st"><b>2</b><p>Povedz zvrat jednou vetou.</p></div>
+      <div class="st"><b>3</b><p>Napíš, čo sa naozaj stalo. Kto, čo, kde.</p></div>
+      <div class="st"><b>4</b><p>Ukáž, že sa to dá zopakovať aj inde.</p></div>
     </div>
     <div class="cap">
-      <div><h3>Výsledky, ktoré fungujú</h3><ul>
+      <div><h3>Čísla, ktoré presvedčia</h3><ul>
         <li>Prevzatie: „within weeks other brands ran their ads in dark mode"</li>
         <li>Správanie: koľko ľudí nástroj použilo</li>
         <li>Škála pri plnom nasadení: „up to 18 billion kWh"</li>
         <li>Earned v číslach: 668 000 €, ROI 2026 : 1</li>
       </ul></div>
-      <div><h3>Výsledky, ktoré nestačia</h3><ul>
+      <div><h3>Čísla, ktoré nestačia</h3><ul>
         <li>Prieskum postoja: „74 % felt more motivated"</li>
-        <li>Počet rozdaných kusov bez správania po nich</li>
-        <li>Hype a prídavné mená o vlastnej práci</li>
+        <li>Koľko kusov sa rozdalo, bez toho, čo ľudia robili potom</li>
+        <li>Superlatívy o vlastnej práci</li>
       </ul></div>
     </div>
     <div class="limits">
@@ -379,8 +379,8 @@ footer p+p{margin-top:8px}
   <div class="wrap wide">
     <div class="head">
       <p class="kicker">Cesta von</p>
-      <h2>Ako lokálna práca cestuje.</h2>
-      <p class="lead">Typ práce predpovie výsledok v zahraničí lepšie ako lokálna medaila.</p>
+      <h2>Čo z domácej práce prejde aj vonku.</h2>
+      <p class="lead">Lepšie to predpovie typ práce ako domáca medaila.</p>
     </div>
     <div class="travel" id="travel"></div>
   </div>
@@ -389,8 +389,8 @@ footer p+p{margin-top:8px}
 
 <footer>
   <div class="wrap wide">
-    <p>Zdroje: Golden Drum 2026 showcase (vlastný rozbor 803 prihlášok a 14 case filmov), Cannes Lions 2026 Entry Kit, D&amp;AD a One Show 2026 entry guides, ADC*E, Eurobest, Epica, Euro Effie, Zlatý klinec, ADC Czech, Effie CZ a SK. Surové poznámky so zdrojom pri každom fakte sú v strategos repozitári.</p>
-    <p>Stav k 19. októbru 2026. Jury pri väčšine Grand Prix zdôvodnenie nezverejnila, časť čítania vzorcov je interpretácia.</p>
+    <p>Zdroje: Golden Drum 2026 (803 prihlášok a 14 case videí som prešiel sám), Cannes Lions 2026 Entry Kit, pravidlá D&amp;AD a One Show 2026, výsledky ADC*E, Eurobest, Epica, Euro Effie, Zlatý klinec, ADC Czech a Effie CZ a SK.</p>
+    <p>Stav k 19. októbru 2026. Pri väčšine Grand Prix porota nezverejnila, prečo vyhrali. Časť vysvetlení je preto môj odhad.</p>
   </div>
 </footer>
 
@@ -400,12 +400,12 @@ const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 
 /* award test */
 const Q=[
- ['Paradox','Dá sa idea povedať jednou vetou so zvratom?','Napíš ten paradox. „Značka pomáha X" ešte nie je idea.'],
- ['Zmena vo svete','Čo sa po kampani zmení, aj keď nikto reklamu neuvidí?','Najsilnejšie: zmenený produkt, zmluva alebo služba.'],
- ['Prevzatie','Kto iný to bude používať alebo kopírovať?','Bez prevzatia je realistický strop bronz alebo striebro.'],
- ['Problém kategórie','Rieši to, čo ohrozuje miesto alebo moment spotreby?','Heineken chráni pub, nie pivo.'],
- ['Tretia strana','Kto z tretích strán to dosvedčí?','Médiá, expert, certifikácia, iné značky, štát.'],
- ['Bez jazyka','Pochopí to porotca z inej krajiny z jedného obrázka?','Lokálny humor v zahraničí klesá o stupeň.']
+ ['Zvrat','Povieš ideu jednou vetou a je v nej zvrat?','Napíš tú vetu. Ak znie „značka pomáha s X", ešte to nie je ono.'],
+ ['Zmena','Zmení sa niečo, aj keď reklamu nikto neuvidí?','Najlepšie je, keď sa zmení samotný produkt. AXA dopísala do poistky tri slová.'],
+ ['Prevzatie','Bude to niekto používať, keď kampaň skončí?','Ak nie, rátaj skôr s bronzom.'],
+ ['Kategória','Pomáha to chvíli, keď si ľudia náš produkt kupujú alebo dávajú?','Heineken zachraňoval puby. Pivo predal popritom.'],
+ ['Svedok','Kto okrem nás povie, že to funguje?','Novinár, lekár, úrad, iná značka. Samochvála porotu nepresvedčí.'],
+ ['Bez slov','Pochopí to Brazílčan v porote z jedného obrázka?','Domáci vtip padne vonku o stupeň nižšie.']
 ];
 const qs=$('#qs'); let st=[0,0,0,0,0,0];
 try{const s=JSON.parse(localStorage.getItem('awardtest')||'null'); if(Array.isArray(s)&&s.length===6) st=s.map(Number)}catch(e){}
@@ -421,11 +421,11 @@ function score(){
   $('#ringv').style.strokeDashoffset=314.16*(1-n/6);
   $('#ringt').textContent=n+'/6';
   let v,note;
-  if(st[0]&&st[1]&&st[2]&&n>=5){v='Grand Prix potenciál';note='Takto vyzerali víťazi sezóny 2026. Metriku prevzatia navrhni už v briefe, aby mal case čo ukázať.'}
-  else if(st[0]&&st[1]&&!st[2]){v='Strop: bronz až striebro';note='Idea komunikuje a niečo mení, ale nikto ju neprevezme. Pridaj nástroj alebo systém, ktorý žije ďalej bez médií.'}
-  else if(n>=4){v='Striebro až zlato';note='Silný základ. Doplň chýbajúce otázky nižšie, najmä paradox a zmenu vo svete.'}
-  else if(n>=2){v='Dobrá komunikácia, slabá award práca';note='Na Effie to môže stačiť, ak sú výsledky tvrdé. Na kreatívne súťaže chýba jadro.'}
-  else{v='Zatiaľ nie je award práca';note='Začni paradoxom a zmenou vo svete. Bez nich nepomôže ani najlepší case film.'}
+  if(st[0]&&st[1]&&st[2]&&n>=5){v='Na Grand Prix to má';note='Takto vyzerali tohtoroční víťazi. Ešte si v briefe dohodni, ako spočítate, kto to prevzal. Inak nebude čo ukázať v case videu.'}
+  else if(st[0]&&st[1]&&!st[2]){v='Skôr bronz, možno striebro';note='Idea sa dá povedať a niečo mení. Lenže keď skončí kampaň, skončí aj ona. Pridaj vec, ktorú si ľudia nechajú.'}
+  else if(n>=4){v='Striebro, so šťastím zlato';note='Základ je dobrý. Pozri, čo chýba. Najviac pomôže zvrat a skutočná zmena.'}
+  else if(n>=2){v='Dobrá kampaň, slabá na súťaže';note='Na Effie to môže stačiť, ak budú čísla. Na kreatívnych súťažiach chýba jadro.'}
+  else{v='Na súťaž to zatiaľ nie je';note='Začni prvými dvoma otázkami. Bez zvratu a bez zmeny to case video nezachráni.'}
   $('#ringv').style.stroke=n>=5?'var(--ok)':n>=3?'var(--gold)':'var(--warn)';
   $('#verdict').textContent=v; $('#vnote').textContent=note;
   $('#missing').innerHTML=Q.map((q,i)=>st[i]?'':`<li>${q[0]}: ${q[2]}</li>`).join('');
@@ -476,39 +476,39 @@ $('#months').innerHTML=Object.keys(byM).sort().map(k=>{
 
 /* patterns */
 const P=[
- ['Produkt, zmluva alebo služba je idea','Najsilnejší vzorec sezóny. Kampaň mení to, čo sa predáva.','AXA dopísala „a domáce násilie" do 2,5 milióna poistiek. Cannes, D&AD Black, One Show Best of Show, 5× GP Eurobest.','Zmenili sme produkt, alebo o ňom len hovoríme?',1],
- ['Nástroj, ktorý si osvoja iní','Kampaň skončí, nástroj žije.','Dark Mode Ads, iné značky ho nasadili do týždňov. Pub, ďalšie dediny kúpili krčmu.','Používa to niekto ďalej, keď kampaň skončí?'],
- ['Problém vlastnej kategórie','Značka opraví to, čo ohrozuje moment spotreby.','Heineken trikrát: miznúce puby, bary proti franšízam, hlasovky namiesto stretnutí.','Čo ohrozuje miesto, kde sa náš produkt spotrebúva?'],
- ['Paradox v jednej vete','Zvrat, ktorý sa dá povedať nahlas.','Blur, ktorý fotky odhaľuje. Zakázaná reklama predávaná ako tričko. Logo ako hardvér.','Dá sa idea povedať ako paradox?'],
- ['Hrozba otočená na účasť','Zlá správa sa stane hrou.','KitKat po krádeži 12 ton spustil verejný tracker. Clash Royale dal amnestiu kopírovačom.','Čo sa nám deje zlé? Dá sa z toho spraviť hra?'],
- ['Komunita to vlastní','Ľudia sú spolumajitelia, nie publikum.','26 spolumajiteľov pubu. Thousand Sponsors of Muni. Lucky Fan Index, Wisła Kraków.','Kto by do toho vložil vlastné peniaze alebo meno?'],
- ['Mikrotrenica a produkt','Každodenná otrava, ktorú vyrieši značka.','Hlasovky, AFK pri jedle, mobil namiesto pauzy (KitKat Phone Break, prvý český Cannes GP).','Akú malú otravu poznajú všetci?'],
- ['Kultúrny moment s vkladom','Moment už beží, značka prinesie to, čo vie len ona.','17. november a rivali, ktorí si ďakujú (Zlatý klinec GP). Spotify Wrapped a test sluchu.','Čo do toho momentu vieme dať len my?'],
- ['Remeslo','Samostatná cesta, nie cieľ stratégie.','Absolut Tabasco, Coinbase Your Way Out. Silná idea so slabým písaním na D&AD neprejde.','Máme režiséra a rozpočet na najlepšie remeslo v kategórii?']
+ ['Produkt je idea','Najviac ocenená vec tejto sezóny. Kampaň zmení to, čo sa predáva.','AXA dopísala do 2,5 milióna poistiek „a domáce násilie". Vyhrala Cannes, D&AD, One Show aj Eurobest.','Meníme produkt, alebo o ňom len rozprávame?',1],
+ ['Nástroj, ktorý si vezmú iní','Kampaň dobehne a vec ostane.','Plenitude dali Dark Mode Ads zadarmo. O pár týždňov ho používali aj iné značky.','Bude to niekto používať o rok?'],
+ ['Problém vlastnej kategórie','Značka opraví niečo, bez čoho by sa jej produkt nepredával.','Heineken trikrát za rok: zatvárajúce sa puby, malé bary proti reťazcom, hlasovky namiesto stretnutia.','Čo dnes ohrozuje chvíľu, keď si ľudia náš produkt dajú?'],
+ ['Zvrat v jednej vete','Taká veta, čo ju porotca prerozpráva pri obede.','Lékaři bez hranic použili rozmazanie, ktoré drsné fotky skrýva, aby ich ukázali. Zakázané reklamy sa predávali ako tričká.','Znie idea trochu nemožne, keď ju povieš nahlas?'],
+ ['Zlá správa ako hra','Niečo sa pokazí a značka z toho spraví zábavu.','KitKatu ukradli 12 ton čokolády. Spustili verejný tracker, kde ľudia hľadali ukradnuté tyčinky.','Čo trápne sa nám stalo? Dá sa s tým hrať?'],
+ ['Ľudia to vlastnia','Komunita do toho dá vlastné peniaze alebo meno.','26 ľudí z jednej írskej dediny si spolu kúpilo poslednú krčmu. Ani jeden z nich nikdy nečapoval.','Kto by do toho dal vlastné peniaze?'],
+ ['Malá otrava','Niečo, čo štve každého. A produkt to vyrieši.','Nekonečné hlasovky. Hra, ktorá ťa vyhodí, keď ideš jesť. Mobil v ruke aj počas pauzy.','Čo nás denne štve tak, že sa o tom ani nehovorí?'],
+ ['Moment, ktorý už beží','Značka sa pridá a prinesie niečo, čo vie len ona.','Keď vláda zrušila sviatok 17. novembra, rivali si navzájom poďakovali za slobodu vybrať si. Dôvera spravila zo Spotify Wrapped test sluchu.','Čo do toho momentu vieme priniesť len my?'],
+ ['Remeslo','Dá sa vyhrať aj čistou kvalitou. Treba na to režiséra a peniaze.','Absolut Tabasco a Coinbase vyhrali réžiou. Na D&AD silná idea so slabým textom neprejde.','Máme na najlepšie remeslo v kategórii?']
 ];
-$('#pgrid').innerHTML=P.map((p,i)=>`<article class="pt${p[4]?' hero-p':''}"><span class="no">${String(i+1).padStart(2,'0')}</span><h3>${esc(p[0])}</h3><p>${esc(p[1])}</p><p class="ex">${esc(p[2])}</p>${p[4]?'<p class="big tnum">3 slová</p><p class="bigs">dopísané do 2,5 milióna poistiek. Najviac ocenená práca sezóny.</p>':''}<p class="qq">${esc(p[3])}</p></article>`).join('');
+$('#pgrid').innerHTML=P.map((p,i)=>`<article class="pt${p[4]?' hero-p':''}"><span class="no">${String(i+1).padStart(2,'0')}</span><h3>${esc(p[0])}</h3><p>${esc(p[1])}</p><p class="ex">${esc(p[2])}</p>${p[4]?'<p class="big tnum">3 slová</p><p class="bigs">a domáca poistka zrazu pomôže aj s únikom pred násilníkom.</p>':''}<p class="qq">${esc(p[3])}</p></article>`).join('');
 
 /* jury map: segments [label-key, value] */
 const C={i:'var(--c-idea)',s:'var(--c-strat)',e:'var(--c-exec)',r:'var(--c-res)',c:'var(--c-craft)'};
 const R=[
- ['Cannes Creative Strategy','stratégovia','cannes',[['s',30],['s',30],['i',20],['r',20]],'Interpretácia výzvy 30, insight 30. Hlavný materiál je deck.'],
- ['Cannes Creative Effectiveness','len víťazi Levov','cannes eff',[['i',25],['s',25],['r',50]],'Výsledky rozhodujú.'],
- ['Cannes PR, B2B','mix','cannes',[['i',20],['s',30],['e',20],['r',30]],'Stratégia a výsledky 60 %.'],
+ ['Cannes Creative Strategy','stratégovia','cannes',[['s',30],['s',30],['i',20],['r',20]],'Rozhoduje deck. Diagnóza a insight sú spolu 60 %.'],
+ ['Cannes Creative Effectiveness','len víťazi Levov','cannes eff',[['i',25],['s',25],['r',50]],'Polovica bodov ide za výsledky.'],
+ ['Cannes PR, B2B','mix','cannes',[['i',20],['s',30],['e',20],['r',30]],'Stratégia a výsledky sú spolu 60 %.'],
  ['Cannes Direct, Social, Commerce','mix','cannes',[['i',30],['s',20],['e',20],['r',30]],''],
  ['Cannes Brand Experience','mix','cannes',[['i',20],['s',20],['e',30],['r',30]],''],
  ['Cannes Media','mediálni ľudia','cannes',[['i',30],['s',30],['e',20],['r',20]],'Insight a idea spolu 30.'],
  ['Cannes SDG, Glass','mix','cannes',[['i',15],['s',20],['e',15],['r',50]],'Glass 25 / 25 / 50.'],
  ['Cannes Design','kreatívci','cannes creative',[['i',40],['e',40],['r',20]],''],
- ['Cannes Film, Outdoor, Titanium','kreatívci','cannes creative',null,'Idea, exekúcia, dopad. Titanium a Innovation obhajujú naživo.'],
- ['D&AD','kreatívci, ~7 na porotu','creative',null,'Originalita a remeslo. Black Pencil „ak vôbec".'],
- ['One Show','kreatívci, anonymne','creative',null,'Najprv idea, potom remeslo.'],
- ['Epica','novinári','creative',[['i',50],['e',50]],'Len originalita a exekúcia. Bez stratégie a výsledkov.'],
- ['ADC*E','kreatívci, verejné finále','creative',null,'Remeslo a lokálny význam. Malý trh môže vyhrať.'],
- ['Golden Drum','kreatívci','creative',null,'Genius Loci pre lokálny kontext.'],
- ['Euro Effie, Effie CZ','marketéri','eff local',[['s',23],['s',23],['e',23],['r',31]],'Výzva, stratégia, exekúcia, výsledky. CZ najprv research agentúra.'],
- ['Effie SK','marketéri, veľa klientov','eff local',[['s',40],['e',20],['r',40]],'Shortlist nad 50 bodov.'],
- ['Zlatý klinec','4 poroty, 5 SK + 1 zahraničný','local',null,'Originalita, idea, exekúcia. GP len zo zlatých.'],
- ['ADC Czech','50+ medzinárodných porotcov','local',null,'Povinný anglický preklad.']
+ ['Cannes Film, Outdoor, Titanium','kreatívci','cannes creative',null,'Percentá nezverejnili. Titanium a Innovation sa obhajujú naživo pred porotou.'],
+ ['D&AD','kreatívci, ~7 na porotu','creative',null,'Pozerajú na originalitu a remeslo. Black Pencil dajú len pár prácam, niekedy žiadnej.'],
+ ['One Show','kreatívci, anonymne','creative',null,'Najprv sa pozerá na ideu, až potom na remeslo.'],
+ ['Epica','novinári','creative',[['i',50],['e',50]],'Súdia novinári. Stratégia a výsledky ich nezaujímajú.'],
+ ['ADC*E','kreatívci, verejné finále','creative',null,'Majú radi remeslo a domáci kontext. Minulý rok vyhralo Gruzínsko.'],
+ ['Golden Drum','kreatívci','creative',null,'Na domáci kontext je kategória Genius Loci.'],
+ ['Euro Effie, Effie CZ','marketéri','eff local',[['s',23],['s',23],['e',23],['r',31]],'V Česku prihlášky najprv preverí research agentúra.'],
+ ['Effie SK','marketéri, veľa klientov','eff local',[['s',40],['e',20],['r',40]],'Na shortlist treba viac ako 50 bodov.'],
+ ['Zlatý klinec','4 poroty, 5 SK + 1 zahraničný','local',null,'Grand Prix vyberajú len zo zlatých.'],
+ ['ADC Czech','50+ medzinárodných porotcov','local',null,'Prihlášky musia byť aj po anglicky.']
 ];
 $('#rows').innerHTML=R.map(r=>`<div class="row" data-g="${r[2]}"><div class="nm">${esc(r[0])}<small>${esc(r[1])}</small></div>${r[3]?`<div class="bar" role="img" aria-label="Váhy">${r[3].map(([k,v])=>`<span style="flex:${v};background:${C[k]}">${v}</span>`).join('')}</div>`:'<div class="bar none">bez zverejnených váh</div>'}<div class="so">${esc(r[4])}</div></div>`).join('');
 const seg=$('#seg'),pill=$('#pill');
@@ -525,12 +525,12 @@ sel(seg.querySelector('button'));
 
 /* travel */
 const T=[
- ['Jedna vizuálna mechanika bez jazyka',4,'až po Grand Prix','KitKat Phone Break, VML Prague: Cannes Outdoor GP, One Show Best of Discipline, ADC Czech GP.'],
- ['Kultúrny moment s vkladom značky',3,'o stupeň nižšie','Collaborators: Zlatý klinec GP, Golden Drum striebro.'],
- ['Effie s tvrdými výsledkami',3,'na Euro Effie','Zlatý Bažant Radler, THIS IS LOCCO: Effie SK zlato, Euro Effie zlato 2025.'],
- ['Lokálny humor a jazyk',1,'klesá o stupeň','Whopper pre Burger King: ADC Czech zlato, Golden Drum a ADC*E bronz.'],
- ['Remeslo',1,'po ADC*E','Zlaté remeslá na Zlatom klinci, v zahraničí bez kovu.'],
- ['Produkt ako rekvizita',0,'necestuje','Šunkové kotouče: ADC Czech striebro, Golden Drum nič.']
+ ['Jeden obrázok bez slov',4,'až po Grand Prix','KitKat Phone Break od VML Prague. Vyhral Cannes, One Show a doma ADC Czech.'],
+ ['Domáci moment s vkladom značky',3,'o stupeň nižšie','Poďakovanie 17. novembru. Doma Grand Prix na Zlatom klinci, na Golden Drum striebro.'],
+ ['Effie s tvrdými číslami',3,'až na Euro Effie','Zlatý Bažant Radler od THIS IS LOCCO. Zlato na Effie SK, potom zlato na Euro Effie.'],
+ ['Domáci humor',1,'o stupeň nižšie','Whopper pre Burger King. Na ADC Czech zlato, na Golden Drum a ADC*E bronz.'],
+ ['Remeslo',1,'najďalej na ADC*E','Zlaté remeslá zo Zlatého klinca sa vonku väčšinou nechytia.'],
+ ['Produkt ako rekvizita',0,'necestuje','Šunkové kotúče. Na ADC Czech striebro, na Golden Drum nič.']
 ];
 $('#travel').innerHTML=T.map(t=>`<div class="tr"><h3>${esc(t[0])}</h3><div class="lvl" role="img" aria-label="${esc(t[2])}">${[1,2,3,4].map(k=>`<i class="${k<=t[1]?'on':''}"></i>`).join('')}<span class="lbl">${esc(t[2])}</span></div><p class="ex">${esc(t[3])}</p></div>`).join('');
 </script>
